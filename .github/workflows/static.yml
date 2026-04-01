@@ -21,12 +21,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive   # ← importante para el tema ananke
+          submodules: recursive
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
+          extended: true          # ← ESTA es la línea clave
 
       - name: Build
         run: hugo --minify
@@ -34,7 +35,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './public'        # ← Hugo genera los archivos en /public
+          path: './public'
 
   deploy:
     environment:
