@@ -1,4 +1,4 @@
-baseURL = 'https://edsaeno.github.io/'
+baseURL = 'https://edsaeno.github.io/HugoWebFinal/'
 languageCode = 'en-us'
 title = 'Esta es la página de Eduardo'
 theme = "ananke" 
